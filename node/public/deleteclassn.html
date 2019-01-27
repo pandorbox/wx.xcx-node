@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="/mystyle.css" >
+
+<title></title>
+</head>
+<body>
+<h2>添加、删除导航栏里的分类</h2>
+	<p>
+	产品名称：
+		<input type="text" id='uname'>
+	</p>
+	<p>
+	产品牌子：
+		<input type="text" id='upwd'>
+	</p>
+	<input type="button" value='确认删除' onclick='dele()'>
+	<input type="button" value='确认添加' onclick='putin()'>
+	<script src='comment.js'></script>
+	<script>
+		function dele(){
+			var xhr=Xhr();
+			xhr.onreadystatechange=function(){
+			if (xhr.readyState==4&&xhr.status==200){
+				var res=xhr.responseText;
+				alert(res)
+			}
+			}
+			xhr.open('post','/demo/delete',true);
+			xhr.setRequestHeader("Content-Type",
+			"application/x-www-form-urlencoded");
+			var uname=$('uname').value;
+			var upwd=$('upwd').value;
+			console.log('uname='+uname+'---upwd='+upwd);
+			var fromdata='uname='+uname+'&upwd='+upwd;
+			xhr.send(fromdata);
+	
+		}
+		function putin(){
+			var xhr=Xhr();
+			xhr.onreadystatechange=function(){
+			if (xhr.readyState==4&&xhr.status==200){
+				var res=xhr.responseText;
+				alert(res)
+			}
+			}
+			xhr.open('post','/demo/putin',true);
+			xhr.setRequestHeader("Content-Type",
+			"application/x-www-form-urlencoded");
+			var uname=$('uname').value;
+			var upwd=$('upwd').value;
+			console.log('uname='+uname+'---upwd='+upwd);
+			var fromdata='uname='+uname+'&upwd='+upwd;
+			xhr.send(fromdata);
+	
+		}
+</script>
+
+
+</body>
+</html>

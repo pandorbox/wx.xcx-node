@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<link rel="stylesheet" type="text/css" href="/mystyle.css" >
+
+</head>
+<body>
+<h2> 修改首页轮播图</h2>
+   <!--enctype="multipart/form-data"-->
+   <!--表单传数据默认按照 字符串传递-->
+   <!--图片不能转换字符串-->
+   <!--表单传数据默认修改 二进制传递-->
+   <!--图片/视频/音频/docx..-->
+   <form action="/demo/banner" method="POST" enctype="multipart/form-data">
+    更换第
+    <select name="bannernum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+
+    </select>
+    张轮播图</br></br>
+      <input type="file" name="mypic" /> <br />
+       
+      <input type="submit" value="上传"  />
+   </form>
+</body>
+</html>
