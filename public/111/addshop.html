@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="/mystyle.css" >
+<title></title>
+</head>
+<body>
+<h2>上传商品信息</h2>
+ <form action="/demo/addinshop" method="POST" enctype="multipart/form-data">
+	<p>
+	产品类别：
+		<input type="text" name='name'>
+	</p> 
+	<p>
+	产品品牌：
+		<input type="text" name='classn'>
+	</p>
+    <p>
+	产品图片：
+		<input type="file" name='myimg'>
+	</p>
+    <p>
+	产品轮播图：
+		<input type="file" multiple name='myimg'>
+	</p>
+    <p>
+	产品详情图：
+		<input type="file" multiple name='myimg'>
+	</p>
+    <p>
+	产品型号：
+		<input type="text" name='size'>
+	</p><p>
+	产品介绍：
+		<input type="text" name='title'>
+	</p>
+    <p>
+	产品价格：
+		<input type="text" name='price'>
+	</p>
+	<input type="submit" value='确认添加'>
+	</form>
+</body>
+</html>
